@@ -1,0 +1,19 @@
+{
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "jquery/jquery-3.5.0.min.js", "main.js" ],
+      "matches": [ "https://letterboxd.com/*/list/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Sorts films in a Letterboxd list by your friends' average rating",
+   "host_permissions": [ "https://letterboxd.com/*" ],
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 3,
+   "name": "Friends Rating Sort for Letterboxd",
+   "version": "1.0"
+}
